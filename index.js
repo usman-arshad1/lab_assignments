@@ -7,7 +7,7 @@ app.use(express.urlencoded({extended: false}));
 
 
 app.get('/', (req,res) => { 
-    res.sendFile("index.html", { root: __dirname })
+    res.sendFile("./index.html", { root: __dirname })
 }); 
 
 app.use(express.static(__dirname));

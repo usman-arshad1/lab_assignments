@@ -20,7 +20,7 @@ document.getElementById('addForm').addEventListener('submit', function(event) {
 
 function searchWord(word) {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', `https://comp4537-lab4-backend.netlify.app/api/definitions?word=${word}`, true);
+    xhr.open('GET', `https://kcawvnqseh.us14.qoddiapp.com/api/definitions?word=${word}`, true);
     xhr.send();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -40,7 +40,7 @@ function addDefinition(word, definition) {
     const xhr = new XMLHttpRequest();
     let sendingData = {word: `${word}`, definition: `${definition}`}
     let data = JSON.stringify(sendingData);
-    xhr.open('POST', 'https://comp4537-lab4-backend.netlify.app/api/definitions', true);
+    xhr.open('POST', 'https://kcawvnqseh.us14.qoddiapp.com/api/definitions', true);
     xhr.send(data);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {

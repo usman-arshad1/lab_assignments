@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Search</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Welcome to Lab 4</h1>
+
+    <form id="addForm" method="post">
+        <input type="text" id="addWordInput" name="word" placeholder="Word...">
+        <input type="text" id="addDefinitionInput" name="definition" placeholder="Definition...">
+        <button type="submit">Add Definition</button>
+    </form>
+    
+    <form id="searchForm" method="get">
+        <input type="text" id="searchInput" name="word" placeholder="Enter a word...">
+        <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

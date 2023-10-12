@@ -1,8 +1,9 @@
 document.getElementById('searchForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    const query = document.getElementById('queryInput').value.toLowerCase();
-    if (query) {
-        searchDatabase(query)
+    const string = document.getElementById('queryInput').value.toLowerCase();
+    if (string) {
+        let query = string.split(';')
+        searchDatabase(query[0] + ";")
     }
 });
 
@@ -13,9 +14,9 @@ const insertData = () => {
     let insert = 
                 `
                 INSERT INTO ''.'patient' ('name', 'dateOfBirth') VALUES 
-                                                ('Sara Brown', '1901-01-01');
-                                                ('John Smith', '1941-01-01');
-                                                ('Jack Ma', '191-01-30');
+                                                ('Sara Brown', '1901-01-01'),
+                                                ('John Smith', '1941-01-01'),
+                                                ('Jack Ma', '191-01-30'),
                                                 ('Elon Musk', '1999-01-01');
                 `
     //JSONify the data
@@ -40,11 +41,11 @@ const insertData = () => {
     };
 }
 
-const searchDatabase = (query) => {
+const searchDatabase = (inputted) => {
     //Creat a new XMLHttpRequest from the backend
     const xhr = new XMLHttpRequest();
-    //Open a connection to the api using the get for searching a word
-    xhr.open('GET', `https://localhost:3000/api/sql?word=${query}`, true);
+    //Open a connection to the api using the get for using the query
+    xhr.open('GET', `https://localhost:3000/api/sql?query=${query}`, true);
     //Sends the above request to the backend
     xhr.send();
     //Returns the request based on the ready state and status of the request from the backend server
@@ -57,7 +58,7 @@ const searchDatabase = (query) => {
                 data.response
         } else {
             //Else for if returns an error like word doesnt exist
-            data = JSON.parse(xhr.responseText)
+            data = JSON.parse(xhr.responseText);
             document.getElementById('results').innerHTML = 
                 data.response
         }

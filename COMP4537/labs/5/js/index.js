@@ -131,29 +131,24 @@ const searchDatabase = (inputted) => {
             for (var i = 0; i < info.SELECT.length; i++) {
                 // Create a new table row element
                 var row = document.createElement("div");
-                if(info.SELECT[i].patientid = undefined){
-                    row.innerHTML = info.SELECT[i].name + ", " + info.SELECT[i].dateOfBirth + "\n"
-                } else if (info.SELECT[i].patientid = undefined && info.select[i].dateOfBirth == undefined){
-                    row.innerHTML = info.SELECT[i].name + "\n"
-                } else if (info.SELECT[i].patientid = undefined && info.select[i].name == undefined){
-                    row.innerHTML = info.SELECT[i].dateOfBirth + "\n"
-                } else if (info.SELECT[i].name = undefined && info.select[i].dateOfBirth == undefined){
-                    row.innerHTML = info.SELECT[i].patientid + "\n"
-                } else if (info.SELECT[i].name){
-                    row.innerHTML = info.SELECT[i].patientid + info.SELECT[i].dateOfBirth + "\n"
-                } else if (info.SELECT[i].dateOfBirth == undefined){
-                    row.innerHTML = info.SELECT[i].patientid + info.SELECT[i].name + "\n"
-                }  else {
-                    row.innerHTML = info.SELECT[i].patientid + ", " + info.SELECT[i].name + ", " + info.SELECT[i].dateOfBirth + "\n"
+                if(info.SELECT[i].patientid !== undefined){
+                    row.innerHTML += info.SELECT[i].patientid + " " 
                 }
+                if (info.SELECT[i].name !== undefined){
+                    row.innerHTML += info.SELECT[i].name + " "
+                }
+                if (info.SELECT[i].dateOfBirth !== undefined){
+                    row.innerHTML += info.SELECT[i].dateOfBirth
+                }
+                row.innerHTML += "\n"
                 // Append the row to the table body
                 table.appendChild(row);
             }
         } else if (xhr.readyState === 4 && xhr.status != 200) {
             //Else for if returns an error like word doesnt exist
             let data = JSON.parse(xhr.responseText);
-            document.getElementById('results').innerHTML = 
-                data.response
+            let result = document.getElementById('results');
+            result.innerHTML = data.response;
         }
     };
 }

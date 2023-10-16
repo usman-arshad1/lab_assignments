@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 5!</title>
-    <script src="./js/index.js"></script>
 </head>
 <body>
     <h1>Lab 5</h1>
 
     <div>
         <form id="Add Rows" method="post">
-            <button type="submit" onclick=insertData()>Add some rows to the database here</button>
+            <button type="submit">Add some rows to the database here</button>
         </form>
 
         <br><br>
 
-        <form id="searchForm" method="get">
+        <form id="searchForm">
             <input type="text" id="queryInput" name="query" placeholder="Enter an Insert or Search Query">
             <button type="submit">Search</button>
         </form>
-        <div id="results"></div>
+        <div id="results">
+        </div>
     </div>
     
+    <script src="./js/index.js"></script>
+
 </body>
 </html>

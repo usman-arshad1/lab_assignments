@@ -35,7 +35,7 @@ const insertData = () => {
     //JSONify the data
     let data = JSON.stringify(insert);
     //Open a connection to the api using the get for searching a word
-    xhr.open('POST', `https://comp4537api.onrender.com/api/sql`, true);
+    xhr.open('POST', `https://vqpyclszgr.us14.qoddiapp.com/api/sql`, true);
     //Sends the above request to the backend
     xhr.send(data);
     //Returns the request based on the ready state and status of the request from the backend server
@@ -78,7 +78,7 @@ const insertDatabase = (insert) => {
     let data = JSON.stringify(query);
     console.log(data)
     //Open a connection to the api using the get for using the query
-    xhr.open('POST', `https://comp4537api.onrender.com/api/sql`, true);
+    xhr.open('POST', `https://vqpyclszgr.us14.qoddiapp.com/api/sql`, true);
     //Sends the above request to the backend
     xhr.send(data);
     //Returns the request based on the ready state and status of the request from the backend server
@@ -114,7 +114,7 @@ const searchDatabase = (inputted) => {
     //Creat a new XMLHttpRequest from the backend
     const xhr = new XMLHttpRequest();
     //Open a connection to the api using the get for using the query
-    xhr.open('GET', `https://comp4537api.onrender.com/api/sql?query=${inputted}`, true);
+    xhr.open('GET', `https://vqpyclszgr.us14.qoddiapp.com/api/sql?query=${inputted}`, true);
     //Sends the above request to the backend
     xhr.send();
     //Returns the request based on the ready state and status of the request from the backend server

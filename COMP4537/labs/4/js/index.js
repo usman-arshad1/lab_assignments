@@ -23,7 +23,7 @@ function searchWord(word) {
     //Creat a new XMLHttpRequest from the backend
     const xhr = new XMLHttpRequest();
     //Open a connection to the api using the get for searching a word
-    xhr.open('GET', `https://comp4537-lab4-backend-yan4.onrender.com/api/definitions?word=${word}`, true);
+    xhr.open('GET', `https://vqpyclszgr.us14.qoddiapp.com/api/definitions?word=${word}`, true);
     //Sends the above request to the backend
     xhr.send();
     //Returns the request based on the ready state and status of the request from the backend server
@@ -52,7 +52,7 @@ function addDefinition(word, definition) {
     //Make them a JSON and put in data variable to send later in the body of the POST
     let data = JSON.stringify(sendingData);
     //Open a connection to the api using POST for adding a word in the body
-    xhr.open('POST', 'https://comp4537-lab4-backend-yan4.onrender.com/api/definitions', true);
+    xhr.open('POST', 'https://vqpyclszgr.us14.qoddiapp.com/api/definitions', true);
     //Send data to backend
     xhr.send(data);
     //Check the ready state response from the backend

@@ -103,7 +103,7 @@ function addDefinition(word, definition,  wordLanguage, definitionLanguage) {
     //Creat a new XMLHttpRequest from the backend
     const xhr = new XMLHttpRequest();
     //Turn the word and definition into JSON format
-    let sendingData = {word: `${word}`, definition: `${definition}`, wordlanguage: wordLanguage, definitionlanguage: definitionLanguage}
+    let sendingData = {word: `${word}`, definition: `${definition}`, wordLanguage: wordLanguage, definitionLanguage: definitionLanguage}
     //Make them a JSON and put in data variable to send later in the body of the POST
     let data = JSON.stringify(sendingData);
     //Open a connection to the api using POST for adding a word in the body
@@ -131,7 +131,7 @@ function updateDefinition(word, definition,  wordLanguage, definitionLanguage) {
     //Creat a new XMLHttpRequest from the backend
     const xhr = new XMLHttpRequest();
     //Turn the word and definition into JSON format
-    let sendingData = {word: `${word}`, definition: `${definition}`, wordlanguage: wordLanguage, definitionlanguage: definitionLanguage}
+    let sendingData = {word: `${word}`, definition: `${definition}`, wordLanguage: wordLanguage, definitionLanguage: definitionLanguage}
     //Make them a JSON and put in data variable to send later in the body of the POST
     let data = JSON.stringify(sendingData);
     //Open a connection to the api using POST for adding a word in the body

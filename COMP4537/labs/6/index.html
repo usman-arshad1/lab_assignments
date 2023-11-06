@@ -12,17 +12,342 @@
     <strong>Word and Definition</strong><br/><br/>
     <form id="addForm" method="post">
         <input type="text" id="addWordInput" name="word" placeholder="Word...">
-        <input type="text" id="addWordLanguageInput" name="word" placeholder="Word Language...">
+        <label for="language">Choose a Language:</label>
+        <select name="languages" id="addWordLanguageInput">
+            <option value="3">English</option>
+            <option value="1">Mandarin Chinese</option>
+            <option value="2">Spanish</option>
+            <option value="4">Russian</option>
+            <option value="5">Standard Arabic</option>
+            <option value="6">Bengali</option>
+            <option value="7">Hindi</option>
+            <option value="8">Portuguese</option>
+            <option value="9">Indonesian</option>
+            <option value="10">Japanese</option>
+            <option value="11">French</option>
+            <option value="12">German</option>
+            <option value="13">Javanese</option>
+            <option value="14">Korean</option>
+            <option value="15">Telugu</option>
+            <option value="16">Vietnamese</option>
+            <option value="17">Marathi</option>
+            <option value="18">Italian</option>
+            <option value="19">Tamil</option>
+            <option value="20">Turkish</option>
+            <option value="21">Urdu</option>
+            <option value="22">Gujarati</option>
+            <option value="23">Polish</option>
+            <option value="24">Ukranian</option>
+            <option value="25">Kannada</option>
+            <option value="26">Maithili</option>
+            <option value="27">Malayalam</option>
+            <option value="28">Iranian Persian</option>
+            <option value="29">Burmese</option>
+            <option value="30">Swahili</option>
+            <option value="31">Sudanese</option>
+            <option value="32">Romanian</option>
+            <option value="33">Panjabi</option>
+            <option value="34">Bhojpuri</option>
+            <option value="35">Amharic</option>
+            <option value="36">Hausa</option>
+            <option value="37">Nigerian Fulfulde</option>
+            <option value="38">Bosnian</option>
+            <option value="39">Croatian</option>
+            <option value="40">Dutch</option>
+            <option value="41">Serbian</option>
+            <option value="42">Thai</option>
+            <option value="43">Central Kurdish</option>
+            <option value="44">Yoruba</option>
+            <option value="45">Northern Uzbek</option>
+            <option value="46">Malay</option>
+            <option value="47">Igbo</option>
+            <option value="48">Nepali</option>
+            <option value="49">Cebuano</option>
+            <option value="50">Saraiki</option>
+            <option value="51">Tagalog</option>
+            <option value="52">Hungarian</option>
+            <option value="53">Northern Azerbaijani</option>
+            <option value="54">Sinhala</option>
+            <option value="55">Komi-Permyak</option>
+            <option value="56">Greek</option>
+            <option value="57">Czech</option>
+            <option value="58">Magahi</option>
+            <option value="59">Rundi</option>
+            <option value="60">Belarusian</option>
+            <option value="61">Plateau Malagasy</option>
+            <option value="62">Chimborazo Highland Quichua</option>
+            <option value="63">Madurese</option>
+            <option value="64">Nyanja</option>
+            <option value="65">Yongbei Zhuang</option>
+            <option value="66">Northern Pashto</option>
+            <option value="67">Kinyarwanda</option>
+            <option value="68">Zulu</option>
+            <option value="69">Bulgarian</option>
+            <option value="70">Swedish</option>
+            <option value="71">Lingala</option>
+            <option value="72">Somali</option>
+            <option value="73">Southern Qiandong Miao</option>
+            <option value="74">Hmong Njua</option>
+            <option value="75">Iloko</option>
+            <option value="76">Khazakh</option>
+        </select>
         <br><br>
         <input type="text" id="addDefinitionInput" name="definition" placeholder="Definition...">
-        <input type="text" id="addDefinitionLanguageInput" name="definition" placeholder="Definition Language...">
-
+        <label for="language">Choose a Language:</label>
+        <select name="languages" id="addDefinitionLanguageInput">
+            <option value="3">English</option>
+            <option value="1">Mandarin Chinese</option>
+            <option value="2">Spanish</option>
+            <option value="4">Russian</option>
+            <option value="5">Standard Arabic</option>
+            <option value="6">Bengali</option>
+            <option value="7">Hindi</option>
+            <option value="8">Portuguese</option>
+            <option value="9">Indonesian</option>
+            <option value="10">Japanese</option>
+            <option value="11">French</option>
+            <option value="12">German</option>
+            <option value="13">Javanese</option>
+            <option value="14">Korean</option>
+            <option value="15">Telugu</option>
+            <option value="16">Vietnamese</option>
+            <option value="17">Marathi</option>
+            <option value="18">Italian</option>
+            <option value="19">Tamil</option>
+            <option value="20">Turkish</option>
+            <option value="21">Urdu</option>
+            <option value="22">Gujarati</option>
+            <option value="23">Polish</option>
+            <option value="24">Ukranian</option>
+            <option value="25">Kannada</option>
+            <option value="26">Maithili</option>
+            <option value="27">Malayalam</option>
+            <option value="28">Iranian Persian</option>
+            <option value="29">Burmese</option>
+            <option value="30">Swahili</option>
+            <option value="31">Sudanese</option>
+            <option value="32">Romanian</option>
+            <option value="33">Panjabi</option>
+            <option value="34">Bhojpuri</option>
+            <option value="35">Amharic</option>
+            <option value="36">Hausa</option>
+            <option value="37">Nigerian Fulfulde</option>
+            <option value="38">Bosnian</option>
+            <option value="39">Croatian</option>
+            <option value="40">Dutch</option>
+            <option value="41">Serbian</option>
+            <option value="42">Thai</option>
+            <option value="43">Central Kurdish</option>
+            <option value="44">Yoruba</option>
+            <option value="45">Northern Uzbek</option>
+            <option value="46">Malay</option>
+            <option value="47">Igbo</option>
+            <option value="48">Nepali</option>
+            <option value="49">Cebuano</option>
+            <option value="50">Saraiki</option>
+            <option value="51">Tagalog</option>
+            <option value="52">Hungarian</option>
+            <option value="53">Northern Azerbaijani</option>
+            <option value="54">Sinhala</option>
+            <option value="55">Komi-Permyak</option>
+            <option value="56">Greek</option>
+            <option value="57">Czech</option>
+            <option value="58">Magahi</option>
+            <option value="59">Rundi</option>
+            <option value="60">Belarusian</option>
+            <option value="61">Plateau Malagasy</option>
+            <option value="62">Chimborazo Highland Quichua</option>
+            <option value="63">Madurese</option>
+            <option value="64">Nyanja</option>
+            <option value="65">Yongbei Zhuang</option>
+            <option value="66">Northern Pashto</option>
+            <option value="67">Kinyarwanda</option>
+            <option value="68">Zulu</option>
+            <option value="69">Bulgarian</option>
+            <option value="70">Swedish</option>
+            <option value="71">Lingala</option>
+            <option value="72">Somali</option>
+            <option value="73">Southern Qiandong Miao</option>
+            <option value="74">Hmong Njua</option>
+            <option value="75">Iloko</option>
+            <option value="76">Khazakh</option>
+        </select>
         <button type="submit">Add Definition</button>
+    </form>
+    <strong>Word and Definition Update</strong><br/><br/>
+    <form id="updateForm" method="patch">
+        <input type="text" id="updateWordInput" name="word" placeholder="Word...">
+        <label for="language">Choose a Language:</label>
+        <select name="languages" id="updateWordLanguageInput">
+            <option value="3">English</option>
+            <option value="1">Mandarin Chinese</option>
+            <option value="2">Spanish</option>
+            <option value="4">Russian</option>
+            <option value="5">Standard Arabic</option>
+            <option value="6">Bengali</option>
+            <option value="7">Hindi</option>
+            <option value="8">Portuguese</option>
+            <option value="9">Indonesian</option>
+            <option value="10">Japanese</option>
+            <option value="11">French</option>
+            <option value="12">German</option>
+            <option value="13">Javanese</option>
+            <option value="14">Korean</option>
+            <option value="15">Telugu</option>
+            <option value="16">Vietnamese</option>
+            <option value="17">Marathi</option>
+            <option value="18">Italian</option>
+            <option value="19">Tamil</option>
+            <option value="20">Turkish</option>
+            <option value="21">Urdu</option>
+            <option value="22">Gujarati</option>
+            <option value="23">Polish</option>
+            <option value="24">Ukranian</option>
+            <option value="25">Kannada</option>
+            <option value="26">Maithili</option>
+            <option value="27">Malayalam</option>
+            <option value="28">Iranian Persian</option>
+            <option value="29">Burmese</option>
+            <option value="30">Swahili</option>
+            <option value="31">Sudanese</option>
+            <option value="32">Romanian</option>
+            <option value="33">Panjabi</option>
+            <option value="34">Bhojpuri</option>
+            <option value="35">Amharic</option>
+            <option value="36">Hausa</option>
+            <option value="37">Nigerian Fulfulde</option>
+            <option value="38">Bosnian</option>
+            <option value="39">Croatian</option>
+            <option value="40">Dutch</option>
+            <option value="41">Serbian</option>
+            <option value="42">Thai</option>
+            <option value="43">Central Kurdish</option>
+            <option value="44">Yoruba</option>
+            <option value="45">Northern Uzbek</option>
+            <option value="46">Malay</option>
+            <option value="47">Igbo</option>
+            <option value="48">Nepali</option>
+            <option value="49">Cebuano</option>
+            <option value="50">Saraiki</option>
+            <option value="51">Tagalog</option>
+            <option value="52">Hungarian</option>
+            <option value="53">Northern Azerbaijani</option>
+            <option value="54">Sinhala</option>
+            <option value="55">Komi-Permyak</option>
+            <option value="56">Greek</option>
+            <option value="57">Czech</option>
+            <option value="58">Magahi</option>
+            <option value="59">Rundi</option>
+            <option value="60">Belarusian</option>
+            <option value="61">Plateau Malagasy</option>
+            <option value="62">Chimborazo Highland Quichua</option>
+            <option value="63">Madurese</option>
+            <option value="64">Nyanja</option>
+            <option value="65">Yongbei Zhuang</option>
+            <option value="66">Northern Pashto</option>
+            <option value="67">Kinyarwanda</option>
+            <option value="68">Zulu</option>
+            <option value="69">Bulgarian</option>
+            <option value="70">Swedish</option>
+            <option value="71">Lingala</option>
+            <option value="72">Somali</option>
+            <option value="73">Southern Qiandong Miao</option>
+            <option value="74">Hmong Njua</option>
+            <option value="75">Iloko</option>
+            <option value="76">Khazakh</option>
+        </select>
+        <br><br>
+        <input type="text" id="updateDefinitionInput" name="definition" placeholder="Definition...">
+        <label for="language">Choose a Language:</label>
+        <select name="languages" id="updateDefinitionLanguageInput">
+            <option value="3">English</option>
+            <option value="1">Mandarin Chinese</option>
+            <option value="2">Spanish</option>
+            <option value="4">Russian</option>
+            <option value="5">Standard Arabic</option>
+            <option value="6">Bengali</option>
+            <option value="7">Hindi</option>
+            <option value="8">Portuguese</option>
+            <option value="9">Indonesian</option>
+            <option value="10">Japanese</option>
+            <option value="11">French</option>
+            <option value="12">German</option>
+            <option value="13">Javanese</option>
+            <option value="14">Korean</option>
+            <option value="15">Telugu</option>
+            <option value="16">Vietnamese</option>
+            <option value="17">Marathi</option>
+            <option value="18">Italian</option>
+            <option value="19">Tamil</option>
+            <option value="20">Turkish</option>
+            <option value="21">Urdu</option>
+            <option value="22">Gujarati</option>
+            <option value="23">Polish</option>
+            <option value="24">Ukranian</option>
+            <option value="25">Kannada</option>
+            <option value="26">Maithili</option>
+            <option value="27">Malayalam</option>
+            <option value="28">Iranian Persian</option>
+            <option value="29">Burmese</option>
+            <option value="30">Swahili</option>
+            <option value="31">Sudanese</option>
+            <option value="32">Romanian</option>
+            <option value="33">Panjabi</option>
+            <option value="34">Bhojpuri</option>
+            <option value="35">Amharic</option>
+            <option value="36">Hausa</option>
+            <option value="37">Nigerian Fulfulde</option>
+            <option value="38">Bosnian</option>
+            <option value="39">Croatian</option>
+            <option value="40">Dutch</option>
+            <option value="41">Serbian</option>
+            <option value="42">Thai</option>
+            <option value="43">Central Kurdish</option>
+            <option value="44">Yoruba</option>
+            <option value="45">Northern Uzbek</option>
+            <option value="46">Malay</option>
+            <option value="47">Igbo</option>
+            <option value="48">Nepali</option>
+            <option value="49">Cebuano</option>
+            <option value="50">Saraiki</option>
+            <option value="51">Tagalog</option>
+            <option value="52">Hungarian</option>
+            <option value="53">Northern Azerbaijani</option>
+            <option value="54">Sinhala</option>
+            <option value="55">Komi-Permyak</option>
+            <option value="56">Greek</option>
+            <option value="57">Czech</option>
+            <option value="58">Magahi</option>
+            <option value="59">Rundi</option>
+            <option value="60">Belarusian</option>
+            <option value="61">Plateau Malagasy</option>
+            <option value="62">Chimborazo Highland Quichua</option>
+            <option value="63">Madurese</option>
+            <option value="64">Nyanja</option>
+            <option value="65">Yongbei Zhuang</option>
+            <option value="66">Northern Pashto</option>
+            <option value="67">Kinyarwanda</option>
+            <option value="68">Zulu</option>
+            <option value="69">Bulgarian</option>
+            <option value="70">Swedish</option>
+            <option value="71">Lingala</option>
+            <option value="72">Somali</option>
+            <option value="73">Southern Qiandong Miao</option>
+            <option value="74">Hmong Njua</option>
+            <option value="75">Iloko</option>
+            <option value="76">Khazakh</option>
+        </select>
+        <button type="submit">Update Definition</button>
     </form>
     <strong>Search for a Word</strong><br/><br/>
     <form id="searchForm" method="get">
         <input type="text" id="searchInput" name="word" placeholder="Enter a word...">
         <button type="submit">Search</button>
+    </form>
+    <strong>Delete a Word</strong><br/><br/>
+    <form id="deleteForm" method="delete">
+        <input type="text" id="deleteInput" name="word" placeholder="Enter a word to delete...">
+        <button id="deleteInput" type="submit">Delete</button>
     </form>
     <div id="results"></div>
 

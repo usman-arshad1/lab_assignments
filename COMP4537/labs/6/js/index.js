@@ -46,7 +46,7 @@ function searchWord(word) {
     //Creat a new XMLHttpRequest from the backend
     const xhr = new XMLHttpRequest();
     //Open a connection to the api using the get for searching a word
-    xhr.open('GET', `http://localhost:3000/api/v1/definition?word=${word}`, true);
+    xhr.open('GET', `https://szajqlwugo.us14.qoddiapp.com/api/v1/definition?word=${word}`, true);
     //Sends the above request to the backend
     xhr.send();
     //Returns the request based on the ready state and status of the request from the backend server
@@ -68,7 +68,7 @@ function searchWord(word) {
     
 }
 
-//The post request to search for the word in the API backend
+//The delete request to delete for the word in the API backend
 function deleteWord(word) {
     //Creat a new XMLHttpRequest from the backend
     const xhr = new XMLHttpRequest();
@@ -76,7 +76,7 @@ function deleteWord(word) {
     //Make them a JSON and put in data variable to send later in the body of the POST
     let data = JSON.stringify(sendingData);
     //Open a connection to the api using the get for searching a word
-    xhr.open('DELETE', `http://localhost:3000/api/v1/definition`, true);
+    xhr.open('DELETE', `https://szajqlwugo.us14.qoddiapp.com/api/v1/definition`, true);
     //Sends the above request to the backend
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.send(data);
@@ -107,7 +107,7 @@ function addDefinition(word, definition,  wordLanguage, definitionLanguage) {
     //Make them a JSON and put in data variable to send later in the body of the POST
     let data = JSON.stringify(sendingData);
     //Open a connection to the api using POST for adding a word in the body
-    xhr.open('POST', 'http://localhost:3000/api/v1/definition', true);
+    xhr.open('POST', 'https://szajqlwugo.us14.qoddiapp.com/api/v1/definition', true);
     //Send data to backend
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.send(data);
@@ -135,7 +135,7 @@ function updateDefinition(word, definition,  wordLanguage, definitionLanguage) {
     //Make them a JSON and put in data variable to send later in the body of the POST
     let data = JSON.stringify(sendingData);
     //Open a connection to the api using POST for adding a word in the body
-    xhr.open('PATCH', 'http://localhost:3000/api/v1/definition', true);
+    xhr.open('PATCH', 'https://szajqlwugo.us14.qoddiapp.com/api/v1/definition', true);
     //Send data to backend
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.send(data);
